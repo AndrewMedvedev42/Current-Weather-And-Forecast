@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/Current-Weather-And-Forecast/static/js/main.e652fdc8.chunk.js",
+    "main.js.map": "/Current-Weather-And-Forecast/static/js/main.e652fdc8.chunk.js.map",
+    "runtime-main.js": "/Current-Weather-And-Forecast/static/js/runtime-main.824e1a74.js",
+    "runtime-main.js.map": "/Current-Weather-And-Forecast/static/js/runtime-main.824e1a74.js.map",
+    "static/js/2.7bb07138.chunk.js": "/Current-Weather-And-Forecast/static/js/2.7bb07138.chunk.js",
+    "static/js/2.7bb07138.chunk.js.map": "/Current-Weather-And-Forecast/static/js/2.7bb07138.chunk.js.map",
+    "static/js/3.5ef1b245.chunk.js": "/Current-Weather-And-Forecast/static/js/3.5ef1b245.chunk.js",
+    "static/js/3.5ef1b245.chunk.js.map": "/Current-Weather-And-Forecast/static/js/3.5ef1b245.chunk.js.map",
+    "index.html": "/Current-Weather-And-Forecast/index.html",
+    "static/js/2.7bb07138.chunk.js.LICENSE.txt": "/Current-Weather-And-Forecast/static/js/2.7bb07138.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.824e1a74.js",
+    "static/js/2.7bb07138.chunk.js",
+    "static/js/main.e652fdc8.chunk.js"
+  ]
+}
