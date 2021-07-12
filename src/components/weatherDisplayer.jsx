@@ -18,8 +18,8 @@ export const WeatherDisplayer = () => {
     return(
         <section>
             {CurrentWeather.data ? (
-                <section>
-                    <section>
+                <section className="MainContainer">
+                    <section className="CurrentWeatherContainer">
                         <div>
                             <h2>{CurrentWeather.data.location.country}</h2>
                             <h1>{CurrentWeather.data.location.name}</h1>
@@ -34,7 +34,7 @@ export const WeatherDisplayer = () => {
                             <p>Wind: {CurrentWeather.data.current.wind_mph} C</p>
                         </div>
                     </section>
-                    <section>
+                    <section className="ForecastContainer">
                         {Forecast.data.forecast.forecastday.map((item)=>{
                             const {date, date_epoch, day, astro} = item
                             return <ForeCastCard key={date_epoch} date={date} data={day}/>

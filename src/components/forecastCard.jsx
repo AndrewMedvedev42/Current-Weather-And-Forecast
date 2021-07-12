@@ -1,8 +1,8 @@
 export const ForeCastCard = ({date, data}) => {
     return(
-        <div>
+        <div className="ForecastSlot">
             <article>
-                <h1>{date}</h1>
+                <h3>{date}</h3>
             </article>
             <article>
                 <h2>{data.condition.text}</h2>

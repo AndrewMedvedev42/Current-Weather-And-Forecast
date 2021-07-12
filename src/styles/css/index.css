@@ -1,0 +1,24 @@
+body {
+  margin: 0; }
+  body h1 {
+    font-size: 2rem;
+    margin: 0; }
+  body h2 {
+    font-size: 1.5rem;
+    margin: 0; }
+  body h3 {
+    font-size: 1rem;
+    margin: 0; }
+  body p {
+    font-size: 1.2rem;
+    margin: 0; }
+  body .MainContainer .CurrentWeatherContainer {
+    margin: 1rem;
+    text-align: center; }
+  body .MainContainer .ForecastContainer {
+    margin: 1rem;
+    display: flex;
+    justify-content: center; }
+    body .MainContainer .ForecastContainer .ForecastSlot {
+      margin: 1rem;
+      text-align: center; }

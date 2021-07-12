@@ -7,6 +7,8 @@ import reportWebVitals from './reportWebVitals';
 import {Provider} from "react-redux"
 import {createStore, applyMiddleware, compose} from "redux"
 import thunk from "redux-thunk" 
+//STYLES
+import "./styles/css/index.css"
 
 const composeEnchancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
