@@ -1,24 +1,64 @@
 body {
   margin: 0; }
   body h1 {
+    font-family: 'Montserrat Alternates', sans-serif;
     font-size: 2rem;
-    margin: 0; }
+    margin: 0.5rem; }
   body h2 {
+    font-family: 'Exo 2', sans-serif;
     font-size: 1.5rem;
-    margin: 0; }
+    margin: 0.5rem; }
   body h3 {
+    font-family: 'Exo 2', sans-serif;
     font-size: 1rem;
     margin: 0; }
   body p {
+    font-family: 'Montserrat Alternates', sans-serif;
     font-size: 1.2rem;
     margin: 0; }
-  body .MainContainer .CurrentWeatherContainer {
-    margin: 1rem;
-    text-align: center; }
-  body .MainContainer .ForecastContainer {
-    margin: 1rem;
+  body .MainContainer {
+    display: flex; }
+    body .MainContainer .CurrentWeatherContainer {
+      width: 50%;
+      margin: 1rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+    body .MainContainer .ForecastContainer {
+      width: 50%;
+      margin: 1rem; }
+      body .MainContainer .ForecastContainer .ForecastSection {
+        display: flex;
+        justify-content: center;
+        flex-direction: column; }
+        body .MainContainer .ForecastContainer .ForecastSection .ForecastSlot {
+          margin: 0rem 1rem;
+          text-align: center;
+          align-items: center; }
+    body .MainContainer .centerTitle {
+      text-align: center; }
+  body #icon {
+    animation: weatherIcon 2s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box; }
+
+@keyframes weatherIcon {
+  0% {
+    transform: translateY(0.2rem); }
+  50% {
+    transform: translateY(0.4rem); }
+  100% {
+    transform: translateY(0.2rem); } }
+  body .DetailedForecast {
     display: flex;
     justify-content: center; }
-    body .MainContainer .ForecastContainer .ForecastSlot {
-      margin: 1rem;
-      text-align: center; }
+    body .DetailedForecast .detailContainer {
+      margin: 1rem; }
+      body .DetailedForecast .detailContainer .forecastIcon {
+        width: 32px; }
+      body .DetailedForecast .detailContainer .forecastIcon:hover {
+        transform: scale(2); }
+      body .DetailedForecast .detailContainer .forecastDetail {
+        font-size: 1rem; }

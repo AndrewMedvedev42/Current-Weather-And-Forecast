@@ -1,34 +1,82 @@
 body{
     margin: 0;
     h1{
+        font-family: 'Montserrat Alternates', sans-serif;
         font-size: 2rem;
-        margin: 0;
+        margin: 0.5rem;
     }
     h2{
+        font-family: 'Exo 2', sans-serif;
         font-size: 1.5rem;
-        margin: 0;
+        margin: 0.5rem;
     }
     h3{
+        font-family: 'Exo 2', sans-serif;
         font-size: 1rem;
         margin: 0;
     }
     p{
+        font-family: 'Montserrat Alternates', sans-serif;
         font-size: 1.2rem;
         margin: 0;
     }
     .MainContainer{
+        display: flex;
         .CurrentWeatherContainer{
+            width: 50%;
             margin: 1rem;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         .ForecastContainer{
+            width: 50%;
             margin: 1rem;
-            display: flex;
-            justify-content: center;
-            .ForecastSlot{
-                margin: 1rem;
-                text-align: center;
+            .ForecastSection{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                .ForecastSlot{
+                    margin: 0rem 1rem;
+                    text-align: center;
+                    align-items: center;
+                }
             }
         }
+        .centerTitle{
+            text-align: center;
+        }
     }
+
+    #icon{
+        animation: weatherIcon 2s linear infinite;
+        transform-origin: center;
+        transform-box: fill-box;
+    }
+    
+    @keyframes weatherIcon{
+        0% {transform: translateY(0.2rem)}
+        50% {transform: translateY(0.4rem)}
+        100% {transform: translateY(0.2rem)}
+    }
+
+    .DetailedForecast{
+        display: flex;
+        justify-content: center;
+    .detailContainer{
+        margin: 1rem;
+        .forecastIcon{
+            width: 32px;
+        }
+        .forecastIcon:hover{
+            transform: scale(2);
+        }
+        .forecastDetail{
+            font-size:1rem;
+        }
+    }
+    }
+
 }
