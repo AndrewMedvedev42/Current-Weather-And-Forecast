@@ -32,6 +32,12 @@ export const ForeCastCard = ({date, data, weatherByHours}) => {
                         return <ForecastDetails data={item} time={timeInHours}/>
                     }else if(timeInHours === "23:00"){
                         return <ForecastDetails data={item} time={timeInHours}/>
+                    }else if(timeInHours === "00:00"){
+                        return <ForecastDetails data={item} time={timeInHours}/>
+                    }else if(timeInHours === "03:00"){
+                        return <ForecastDetails data={item} time={timeInHours}/>
+                    }else if(timeInHours === "06:00"){
+                        return <ForecastDetails data={item} time={timeInHours}/>
                     }
                 })}
             </section>

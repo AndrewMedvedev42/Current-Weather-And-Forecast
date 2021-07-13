@@ -19,16 +19,14 @@ body {
   body .MainContainer {
     display: flex; }
     body .MainContainer .CurrentWeatherContainer {
-      width: 50%;
-      margin: 1rem;
+      width: 40%;
       text-align: center;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center; }
     body .MainContainer .ForecastContainer {
-      width: 50%;
-      margin: 1rem; }
+      width: 60%; }
       body .MainContainer .ForecastContainer .ForecastSection {
         display: flex;
         justify-content: center;
@@ -39,26 +37,15 @@ body {
           align-items: center; }
     body .MainContainer .centerTitle {
       text-align: center; }
-  body #icon {
-    animation: weatherIcon 2s linear infinite;
-    transform-origin: center;
-    transform-box: fill-box; }
-
-@keyframes weatherIcon {
-  0% {
-    transform: translateY(0.2rem); }
-  50% {
-    transform: translateY(0.4rem); }
-  100% {
-    transform: translateY(0.2rem); } }
   body .DetailedForecast {
     display: flex;
     justify-content: center; }
     body .DetailedForecast .detailContainer {
+      transition: 0.5s;
       margin: 1rem; }
       body .DetailedForecast .detailContainer .forecastIcon {
         width: 32px; }
-      body .DetailedForecast .detailContainer .forecastIcon:hover {
-        transform: scale(2); }
       body .DetailedForecast .detailContainer .forecastDetail {
         font-size: 1rem; }
+    body .DetailedForecast .detailContainer:hover {
+      transform: scale(2); }

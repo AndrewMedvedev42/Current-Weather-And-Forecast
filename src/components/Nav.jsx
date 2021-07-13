@@ -20,14 +20,14 @@ export const Nav = () => {
             {/* <h1 className="centerTitle">Current weather and Forecast</h1> */}
             <div>
                 <input onChange={onChange} type="text" />
-                <button value={cityName} type="submit" onClick={submitAction}>Click</button>
+                <button value={cityName} type="submit" onClick={submitAction}>Search</button>
             </div>
         </Navigation>
     )
 }
 
 const Navigation = styled.div`
-    margin: 2rem;
+    padding:1.5rem;
     .centerTitle{
             text-align: center;
         }
@@ -37,21 +37,27 @@ const Navigation = styled.div`
     }
     input, button{
         font-family: 'Exo 2', sans-serif;
-        border: none;
         font-size:1.5rem;
         padding: 0.5rem 1.5rem;
         outline: none;
+        border: none;
+        box-shadow:#0086b3 0.5rem 0.5rem 0px;
     }
     input{
         width: 300px;
-        box-shadow: inset #0000003b 0px 0px 2px;
+        border: #1ac6ff solid 1rem;
+        border-top-left-radius: 2rem;
+        border-bottom-left-radius: 2rem;
     }
     button{
+        padding: 0.5rem 2rem;
         cursor: pointer;
         color: white;
         background-color: #1ac6ff;
         transition: 0.5s;
         font-weight: bolder;
+        border-top-right-radius: 2rem;
+        border-bottom-right-radius: 2rem;
     }
     button:hover{
         background-color: #00ace6;

@@ -23,8 +23,7 @@ body{
     .MainContainer{
         display: flex;
         .CurrentWeatherContainer{
-            width: 50%;
-            margin: 1rem;
+            width: 40%;
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -32,8 +31,7 @@ body{
             align-items: center;
         }
         .ForecastContainer{
-            width: 50%;
-            margin: 1rem;
+            width: 60%;
             .ForecastSection{
                 display: flex;
                 justify-content: center;
@@ -50,32 +48,33 @@ body{
         }
     }
 
-    #icon{
-        animation: weatherIcon 2s linear infinite;
-        transform-origin: center;
-        transform-box: fill-box;
-    }
+    // #icon{
+    //     animation: weatherIcon 2s linear infinite;
+    //     transform-origin: center;
+    //     transform-box: fill-box;
+    // }
     
-    @keyframes weatherIcon{
-        0% {transform: translateY(0.2rem)}
-        50% {transform: translateY(0.4rem)}
-        100% {transform: translateY(0.2rem)}
-    }
+    // @keyframes weatherIcon{
+    //     0% {transform: translateY(0.2rem)}
+    //     50% {transform: translateY(0.4rem)}
+    //     100% {transform: translateY(0.2rem)}
+    // }
 
     .DetailedForecast{
         display: flex;
         justify-content: center;
     .detailContainer{
+        transition: 0.5s;
         margin: 1rem;
         .forecastIcon{
             width: 32px;
         }
-        .forecastIcon:hover{
-            transform: scale(2);
-        }
         .forecastDetail{
             font-size:1rem;
         }
+    }
+    .detailContainer:hover{
+        transform: scale(2);
     }
     }
 

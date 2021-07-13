@@ -13,7 +13,7 @@ export const WeatherDisplayer = () => {
     const dispatch = useDispatch()
 
     useEffect(()=>{
-        dispatch(loadWeather("kiev"))
+        dispatch(loadWeather("kyoto"))
     },[dispatch])
 
     return(
@@ -53,12 +53,16 @@ export const WeatherDisplayer = () => {
 }
 
 const CurrentWeatherContainer = styled.div`
-    border-radius: 25px;
-    padding: 2rem;
-    border: black dashed 5px;
+    margin: 1rem;
+    padding: 1rem;
+    border: #1ac6ff solid 1rem;
+    border-radius: 2rem;
+    box-shadow:#0086b3 0.5rem 0.5rem 0px;
 `
 const ForecastContainer = styled.div`
-    border: black dashed 5px;
-    border-radius: 25px;
-    padding: 2rem;
+    margin: 1rem;
+    padding: 1rem;
+    border: #1ac6ff solid 1rem;
+    border-radius: 2rem;
+    box-shadow:#0086b3 0.5rem 0.5rem 0px;
 `
