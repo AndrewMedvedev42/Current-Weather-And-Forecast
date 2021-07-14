@@ -45,7 +45,7 @@ const Navigation = styled.div`
     }
     input{
         width: 300px;
-        border: #1ac6ff solid 1rem;
+        border: #1ac6ff solid 0.5rem;
         border-top-left-radius: 2rem;
         border-bottom-left-radius: 2rem;
     }

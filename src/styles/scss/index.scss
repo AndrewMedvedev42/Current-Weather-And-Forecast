@@ -11,9 +11,12 @@ body{
         margin: 0.5rem;
     }
     h3{
-        font-family: 'Exo 2', sans-serif;
-        font-size: 1rem;
+        font-family: 'Montserrat Alternates', sans-serif;
+        font-size: 1.3rem;
         margin: 0;
+    }
+    h4{
+        font-family: 'Exo 2', sans-serif;
     }
     p{
         font-family: 'Montserrat Alternates', sans-serif;
@@ -48,17 +51,16 @@ body{
         }
     }
 
-    // #icon{
-    //     animation: weatherIcon 2s linear infinite;
-    //     transform-origin: center;
-    //     transform-box: fill-box;
-    // }
+    #iconAnimate{
+        animation: weatherIcon 2s linear infinite;
+        transform-origin: center;
+        transform-box: fill-box;
+    }
     
-    // @keyframes weatherIcon{
-    //     0% {transform: translateY(0.2rem)}
-    //     50% {transform: translateY(0.4rem)}
-    //     100% {transform: translateY(0.2rem)}
-    // }
+    @keyframes weatherIcon{
+        0% {transform:rotate(0deg)}
+        100% {transform:rotate(360deg)}
+    }
 
     .DetailedForecast{
         display: flex;
@@ -77,5 +79,29 @@ body{
         transform: scale(2);
     }
     }
-
 }
+
+@media screen and (max-width: 600px) {
+    body {
+        .MainContainer{
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .CurrentWeatherContainer{
+                width: 70%;
+            }
+            .ForecastContainer{
+                width: 70%;
+            }
+            .DetailedForecast{
+                flex-wrap: wrap;
+                .forecastIcon{
+                    width: 48px;
+                }
+                .forecastDetail{
+                    font-size:1.3rem;
+                }
+            }
+        }
+    }
+  }

@@ -4,11 +4,14 @@ import {useDispatch, useSelector} from "react-redux"
 import {loadWeather} from "../actions/weatherActoin"
 import {ForeCastCard} from "./forecastCard"
 import styled from "styled-components"
+import { FiSun } from "react-icons/fi";
+import FadeIn from 'react-fade-in';
 
 export const WeatherDisplayer = () => {
 
     const CurrentWeather = useSelector((state) => state.currentWeather)
     const Forecast = useSelector((state) => state.weatherForecast)
+    const isLoading = useSelector((state) => state.isLoading)
 
     const dispatch = useDispatch()
 
@@ -18,7 +21,8 @@ export const WeatherDisplayer = () => {
 
     return(
         <section>
-            {CurrentWeather.data ? (
+            {!isLoading ? (
+                <FadeIn>
                 <section className="MainContainer">
                     <CurrentWeatherContainer className="CurrentWeatherContainer">
                     <h1 className="centerTitle">Current weather</h1>
@@ -47,10 +51,25 @@ export const WeatherDisplayer = () => {
 
                     </ForecastContainer>
                 </section>
-            ):console.log(null)}
+                </FadeIn>
+            ):(<LoadingMessage>
+                <FiSun id="iconAnimate" size={150}/>
+                <h1>The weather is loading!</h1>
+                <h4>if the page won't load that means that server isn't responding</h4>
+                <h3>Try to fill your input correctly or reload page.</h3>
+            </LoadingMessage>)}
         </section>
     )
 }
+
+const LoadingMessage = styled.div`
+    color: #0086b3;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`
 
 const CurrentWeatherContainer = styled.div`
     margin: 1rem;

@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Current-Weather-And-Forecast/static/css/main.7dc52855.chunk.css",
-    "main.js": "/Current-Weather-And-Forecast/static/js/main.9f4fe41b.chunk.js",
-    "main.js.map": "/Current-Weather-And-Forecast/static/js/main.9f4fe41b.chunk.js.map",
-    "runtime-main.js": "/Current-Weather-And-Forecast/static/js/runtime-main.67e73503.js",
-    "runtime-main.js.map": "/Current-Weather-And-Forecast/static/js/runtime-main.67e73503.js.map",
-    "static/js/2.e213c7dc.chunk.js": "/Current-Weather-And-Forecast/static/js/2.e213c7dc.chunk.js",
-    "static/js/2.e213c7dc.chunk.js.map": "/Current-Weather-And-Forecast/static/js/2.e213c7dc.chunk.js.map",
-    "static/js/3.91c4dbb7.chunk.js": "/Current-Weather-And-Forecast/static/js/3.91c4dbb7.chunk.js",
-    "static/js/3.91c4dbb7.chunk.js.map": "/Current-Weather-And-Forecast/static/js/3.91c4dbb7.chunk.js.map",
+    "main.css": "/Current-Weather-And-Forecast/static/css/main.aff8d6b8.chunk.css",
+    "main.js": "/Current-Weather-And-Forecast/static/js/main.4c12d8b5.chunk.js",
+    "main.js.map": "/Current-Weather-And-Forecast/static/js/main.4c12d8b5.chunk.js.map",
+    "runtime-main.js": "/Current-Weather-And-Forecast/static/js/runtime-main.b8f7579f.js",
+    "runtime-main.js.map": "/Current-Weather-And-Forecast/static/js/runtime-main.b8f7579f.js.map",
+    "static/js/2.62cfbd42.chunk.js": "/Current-Weather-And-Forecast/static/js/2.62cfbd42.chunk.js",
+    "static/js/2.62cfbd42.chunk.js.map": "/Current-Weather-And-Forecast/static/js/2.62cfbd42.chunk.js.map",
+    "static/js/3.f912a780.chunk.js": "/Current-Weather-And-Forecast/static/js/3.f912a780.chunk.js",
+    "static/js/3.f912a780.chunk.js.map": "/Current-Weather-And-Forecast/static/js/3.f912a780.chunk.js.map",
     "index.html": "/Current-Weather-And-Forecast/index.html",
-    "static/css/main.7dc52855.chunk.css.map": "/Current-Weather-And-Forecast/static/css/main.7dc52855.chunk.css.map",
-    "static/js/2.e213c7dc.chunk.js.LICENSE.txt": "/Current-Weather-And-Forecast/static/js/2.e213c7dc.chunk.js.LICENSE.txt"
+    "static/css/main.aff8d6b8.chunk.css.map": "/Current-Weather-And-Forecast/static/css/main.aff8d6b8.chunk.css.map",
+    "static/js/2.62cfbd42.chunk.js.LICENSE.txt": "/Current-Weather-And-Forecast/static/js/2.62cfbd42.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.67e73503.js",
-    "static/js/2.e213c7dc.chunk.js",
-    "static/css/main.7dc52855.chunk.css",
-    "static/js/main.9f4fe41b.chunk.js"
+    "static/js/runtime-main.b8f7579f.js",
+    "static/js/2.62cfbd42.chunk.js",
+    "static/css/main.aff8d6b8.chunk.css",
+    "static/js/main.4c12d8b5.chunk.js"
   ]
 }
