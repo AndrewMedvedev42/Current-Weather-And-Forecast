@@ -6,9 +6,9 @@ import {ForeCastCard} from "./forecastCard"
 import styled from "styled-components"
 import { FiSun } from "react-icons/fi";
 import FadeIn from 'react-fade-in';
+import {CountryFlag} from "./CountryFlag"
 
 export const WeatherDisplayer = () => {
-
     const CurrentWeather = useSelector((state) => state.currentWeather)
     const Forecast = useSelector((state) => state.weatherForecast)
     const isLoading = useSelector((state) => state.isLoading)
@@ -26,8 +26,12 @@ export const WeatherDisplayer = () => {
                 <section className="MainContainer">
                     <CurrentWeatherContainer className="CurrentWeatherContainer">
                     <h1 className="centerTitle">Current weather</h1>
+                        <FadeIn>
                         <div>
-                            <h2>{CurrentWeather.data.location.country}</h2>
+                            <div className="countryData">
+                                <h2>{CurrentWeather.data.location.country}</h2>
+                                <CountryFlag country_name={CurrentWeather.data.location.country}/>
+                            </div>
                             <h1>{CurrentWeather.data.location.name}</h1>
                             <h3>{CurrentWeather.data.location.localtime}</h3>
                         </div>
@@ -39,8 +43,10 @@ export const WeatherDisplayer = () => {
                             <p>Temp: {CurrentWeather.data.current.temp_c} C</p>
                             <p>Wind: {CurrentWeather.data.current.wind_kph} km/h</p>
                         </div>
+                        </FadeIn>
                     </CurrentWeatherContainer>
                     <ForecastContainer className="ForecastContainer">
+                    <FadeIn>
                         <h1 className="centerTitle">Forecast for {CurrentWeather.data.location.name}</h1>
                         <section className="ForecastSection">
                             {Forecast.data.forecast.forecastday.map((item)=>{
@@ -48,7 +54,7 @@ export const WeatherDisplayer = () => {
                                 return <ForeCastCard key={date_epoch} date={date} data={day} weatherByHours={hour}/>
                             })}
                         </section>
-
+                    </FadeIn>
                     </ForecastContainer>
                 </section>
                 </FadeIn>

@@ -27,6 +27,13 @@ body {
       flex-direction: column;
       justify-content: center;
       align-items: center; }
+      body .MainContainer .CurrentWeatherContainer .countryData {
+        justify-content: center;
+        display: flex;
+        align-items: center; }
+        body .MainContainer .CurrentWeatherContainer .countryData .countryFlag {
+          width: 50px;
+          border: 0.5px solid rgba(0, 0, 0, 0.192); }
     body .MainContainer .ForecastContainer {
       width: 60%; }
       body .MainContainer .ForecastContainer .ForecastSection {
