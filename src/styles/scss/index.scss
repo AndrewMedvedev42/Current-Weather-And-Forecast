@@ -91,7 +91,15 @@ body{
 }
 
 @media screen and (max-width: 600px) {
+    .ForecastSlot{
+        margin: 0rem 0rem;
+    }
     body {
+        .Nav{
+            input{
+                width: 150px;
+            }
+        }
         .MainContainer{
             flex-direction: column;
             align-items: center;
@@ -101,6 +109,12 @@ body{
             }
             .ForecastContainer{
                 width: 70%;
+                .ForecastSection{
+                    margin: 0rem 0rem;
+                    .ForecastSlot{
+                        margin: 0rem 0rem;
+                    }
+                }
             }
             .DetailedForecast{
                 flex-wrap: wrap;
@@ -109,6 +123,7 @@ body{
                 }
                 .forecastDetail{
                     font-size:1.3rem;
+                    
                 }
             }
         }

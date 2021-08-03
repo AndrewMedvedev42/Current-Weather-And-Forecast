@@ -72,6 +72,7 @@ const LoadingMessage = styled.div`
     color: #0086b3;
     height: 50vh;
     display: flex;
+    text-align: center;
     flex-direction: column;
     justify-content: center;
     align-items: center;

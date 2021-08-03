@@ -70,6 +70,10 @@ body {
       transform: scale(2); }
 
 @media screen and (max-width: 600px) {
+  .ForecastSlot {
+    margin: 0rem 0rem; }
+  body .Nav input {
+    width: 150px; }
   body .MainContainer {
     flex-direction: column;
     align-items: center;
@@ -78,6 +82,10 @@ body {
       width: 70%; }
     body .MainContainer .ForecastContainer {
       width: 70%; }
+      body .MainContainer .ForecastContainer .ForecastSection {
+        margin: 0rem 0rem; }
+        body .MainContainer .ForecastContainer .ForecastSection .ForecastSlot {
+          margin: 0rem 0rem; }
     body .MainContainer .DetailedForecast {
       flex-wrap: wrap; }
       body .MainContainer .DetailedForecast .forecastIcon {
