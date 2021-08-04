@@ -2,21 +2,13 @@ import styled from "styled-components"
 
 export const ForeCastCard = ({date, data, weatherByHours}) => {
     return(
-        <ForecastSlot className="ForecastSlot">
+        <ForecastSlot className="DailyForecastSlot">
             <div>
                 <article>
-                    <h3>{date}</h3>
+                    <h2 className="ForecastDate">{date}</h2>
                 </article>
-                {/* <article>
-                    <h2>{data.condition.text}</h2>
-                    <img id="icon" src={data.condition.icon} alt="" />
-                </article>
-                <article>
-                    <p>Max Temp: {data.maxtemp_c} C</p>
-                    <p>Min Temp: {data.mintemp_c} C</p>
-                </article> */}
             </div>
-            <section className="DetailedForecast">
+            <section className="ForecastDetails">
                 {weatherByHours.map((item)=>{
                     const timeInHours = item.time.slice(11)
 
@@ -47,9 +39,9 @@ export const ForeCastCard = ({date, data, weatherByHours}) => {
 
 const ForecastDetails = ({data,time}) =>{
     return(
-        <div className="detailContainer">
-            <img className="forecastIcon" src={data.condition.icon} alt="" />
-            <p className="forecastDetail">{time}</p>
+        <div className="Details">
+            <img className="Icon" src={data.condition.icon} alt="" />
+            <p className="Detail">{time}</p>
             {/* <p className="forecastDetail">{data.condition.text}</p> */}
         </div>
     )

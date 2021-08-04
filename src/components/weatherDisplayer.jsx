@@ -48,7 +48,7 @@ export const WeatherDisplayer = () => {
                     <ForecastContainer className="ForecastContainer">
                     <FadeIn>
                         <h1 className="centerTitle">Forecast for {CurrentWeather.data.location.name}</h1>
-                        <section className="ForecastSection">
+                        <section className="DailyForecast">
                             {Forecast.data.forecast.forecastday.map((item)=>{
                                 const {date, date_epoch, day, astro, hour} = item
                                 return <ForeCastCard key={date_epoch} date={date} data={day} weatherByHours={hour}/>

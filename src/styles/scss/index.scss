@@ -15,6 +15,10 @@ body{
         font-size: 1.3rem;
         margin: 0;
     }
+    .ForecastDate{
+        font-family: 'Montserrat Alternates', sans-serif;
+        font-size: 1.7rem;
+    }
     h4{
         font-family: 'Exo 2', sans-serif;
     }
@@ -44,14 +48,30 @@ body{
         }
         .ForecastContainer{
             width: 60%;
-            .ForecastSection{
+            .DailyForecast{
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
-                .ForecastSlot{
-                    margin: 0rem 1rem;
+                .DailyForecastSlot{
                     text-align: center;
                     align-items: center;
+                        .ForecastDetails{
+                            display: flex;
+                            justify-content: center;
+                        .Details{
+                            transition: 0.5s;
+                            margin: 1rem;
+                            .Icon{
+                                width: 32px;
+                            }
+                            .Details{
+                                font-size:1rem;
+                            }
+                        }
+                        .Details:hover{
+                            transform: scale(2);
+                        }
+                        }
                 }
             }
         }
@@ -69,24 +89,6 @@ body{
     @keyframes weatherIcon{
         0% {transform:rotate(0deg)}
         100% {transform:rotate(360deg)}
-    }
-
-    .DetailedForecast{
-        display: flex;
-        justify-content: center;
-    .detailContainer{
-        transition: 0.5s;
-        margin: 1rem;
-        .forecastIcon{
-            width: 32px;
-        }
-        .forecastDetail{
-            font-size:1rem;
-        }
-    }
-    .detailContainer:hover{
-        transform: scale(2);
-    }
     }
 }
 
@@ -108,20 +110,23 @@ body{
                 width: 70%;
             }
             .ForecastContainer{
-                width: 70%;
-                .ForecastSection{
+                width: 75%;
+                .DailyForecast{
                     margin: 0rem 0rem;
-                    .ForecastSlot{
+                    .DailyForecastSlot{
                         margin: 0rem 0rem;
+                        .ForecastDetails{
+                            margin: 0rem 0rem;
+                        }
                     }
                 }
             }
-            .DetailedForecast{
+            .ForecastDetails{
                 flex-wrap: wrap;
-                .forecastIcon{
+                .Icon{
                     width: 48px;
                 }
-                .forecastDetail{
+                .Detail{
                     font-size:1.3rem;
                     
                 }

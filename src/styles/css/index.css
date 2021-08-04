@@ -12,6 +12,9 @@ body {
     font-family: 'Montserrat Alternates', sans-serif;
     font-size: 1.3rem;
     margin: 0; }
+  body .ForecastDate {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 1.7rem; }
   body h4 {
     font-family: 'Exo 2', sans-serif; }
   body p {
@@ -36,14 +39,25 @@ body {
           border: 0.5px solid rgba(0, 0, 0, 0.192); }
     body .MainContainer .ForecastContainer {
       width: 60%; }
-      body .MainContainer .ForecastContainer .ForecastSection {
+      body .MainContainer .ForecastContainer .DailyForecast {
         display: flex;
         justify-content: center;
         flex-direction: column; }
-        body .MainContainer .ForecastContainer .ForecastSection .ForecastSlot {
-          margin: 0rem 1rem;
+        body .MainContainer .ForecastContainer .DailyForecast .DailyForecastSlot {
           text-align: center;
           align-items: center; }
+          body .MainContainer .ForecastContainer .DailyForecast .DailyForecastSlot .ForecastDetails {
+            display: flex;
+            justify-content: center; }
+            body .MainContainer .ForecastContainer .DailyForecast .DailyForecastSlot .ForecastDetails .Details {
+              transition: 0.5s;
+              margin: 1rem; }
+              body .MainContainer .ForecastContainer .DailyForecast .DailyForecastSlot .ForecastDetails .Details .Icon {
+                width: 32px; }
+              body .MainContainer .ForecastContainer .DailyForecast .DailyForecastSlot .ForecastDetails .Details .Details {
+                font-size: 1rem; }
+            body .MainContainer .ForecastContainer .DailyForecast .DailyForecastSlot .ForecastDetails .Details:hover {
+              transform: scale(2); }
     body .MainContainer .centerTitle {
       text-align: center; }
   body #iconAnimate {
@@ -56,18 +70,6 @@ body {
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
-  body .DetailedForecast {
-    display: flex;
-    justify-content: center; }
-    body .DetailedForecast .detailContainer {
-      transition: 0.5s;
-      margin: 1rem; }
-      body .DetailedForecast .detailContainer .forecastIcon {
-        width: 32px; }
-      body .DetailedForecast .detailContainer .forecastDetail {
-        font-size: 1rem; }
-    body .DetailedForecast .detailContainer:hover {
-      transform: scale(2); }
 
 @media screen and (max-width: 600px) {
   .ForecastSlot {
@@ -81,14 +83,16 @@ body {
     body .MainContainer .CurrentWeatherContainer {
       width: 70%; }
     body .MainContainer .ForecastContainer {
-      width: 70%; }
-      body .MainContainer .ForecastContainer .ForecastSection {
+      width: 75%; }
+      body .MainContainer .ForecastContainer .DailyForecast {
         margin: 0rem 0rem; }
-        body .MainContainer .ForecastContainer .ForecastSection .ForecastSlot {
+        body .MainContainer .ForecastContainer .DailyForecast .DailyForecastSlot {
           margin: 0rem 0rem; }
-    body .MainContainer .DetailedForecast {
+          body .MainContainer .ForecastContainer .DailyForecast .DailyForecastSlot .ForecastDetails {
+            margin: 0rem 0rem; }
+    body .MainContainer .ForecastDetails {
       flex-wrap: wrap; }
-      body .MainContainer .DetailedForecast .forecastIcon {
+      body .MainContainer .ForecastDetails .Icon {
         width: 48px; }
-      body .MainContainer .DetailedForecast .forecastDetail {
+      body .MainContainer .ForecastDetails .Detail {
         font-size: 1.3rem; } }
