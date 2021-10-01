@@ -23,20 +23,12 @@ body {
     margin: 0; }
   body .MainContainer {
     display: flex; }
-    body .MainContainer .CurrentWeatherContainer {
-      width: 40%;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center; }
-      body .MainContainer .CurrentWeatherContainer .countryData {
+    body .MainContainer .leftSection {
+      width: 40%; }
+      body .MainContainer .leftSection .CurrentWeatherContainer .countryData {
         justify-content: center;
         display: flex;
         align-items: center; }
-        body .MainContainer .CurrentWeatherContainer .countryData .countryFlag {
-          width: 50px;
-          border: 0.5px solid rgba(0, 0, 0, 0.192); }
     body .MainContainer .ForecastContainer {
       width: 60%; }
       body .MainContainer .ForecastContainer .DailyForecast {
@@ -77,13 +69,17 @@ body {
   body .Nav input {
     width: 150px; }
   body .MainContainer {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; }
-    body .MainContainer .CurrentWeatherContainer {
-      width: 70%; }
+    display: flex; }
+    body .MainContainer .cappa {
+      border: #b16d1a 5px dashed;
+      width: 20%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
     body .MainContainer .ForecastContainer {
-      width: 75%; }
+      width: 50%; }
       body .MainContainer .ForecastContainer .DailyForecast {
         margin: 0rem 0rem; }
         body .MainContainer .ForecastContainer .DailyForecast .DailyForecastSlot {

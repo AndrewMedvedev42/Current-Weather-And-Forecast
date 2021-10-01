@@ -1,5 +1,5 @@
 import axios from "axios"
-import {currentWeatherURL, weatherForecastURL, getCountryURL} from "../API"
+import {currentWeatherURL, weatherForecastURL} from "../API"
 
 export const loadWeather = (city_name) => async (dispatch) => {
 
@@ -14,16 +14,6 @@ export const loadWeather = (city_name) => async (dispatch) => {
         payload:{
             current: currentWeather,
             forecast: weatherForecast,
-        }
-    })
-}
-
-export const loadCounty = (country_name) => async (dispatch) => {
-    const country = await axios.get(getCountryURL(country_name))
-    dispatch({
-        type:"FETCH_COUNTRY",
-        payload:{
-            country: country,
         }
     })
 }
