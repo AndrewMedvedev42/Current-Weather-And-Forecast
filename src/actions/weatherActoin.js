@@ -17,9 +17,11 @@ export const loadWeather = (city_name) => async (dispatch) => {
             }
         })
     } catch (err) {
-        console.log(`ERROR ${err}`);
         dispatch({
             type:"FAILED_TO_FETCH_DATA",
+            payload:{
+                error: err,
+            }
         })
     }
 }

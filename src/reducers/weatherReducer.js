@@ -3,7 +3,8 @@ const State = {
     weatherForecast:[],
     countryDetails:[],
     isLoading:true,
-    isFailedToFetchData:false
+    isFailedToFetchData:false,
+    isFailedToFetchDataMessage:""
 }
 
 export const weatherReducer = (state=State, action) => {
@@ -18,6 +19,7 @@ export const weatherReducer = (state=State, action) => {
         case "FAILED_TO_FETCH_DATA":
                 return {...state, 
                     isFailedToFetchData:true,
+                    isFailedToFetchDataMessage:action.payload.error,
                         isLoading:false}
         default:
             return {...state}
