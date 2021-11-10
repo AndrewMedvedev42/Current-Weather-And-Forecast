@@ -11,6 +11,7 @@ export const WeatherDisplayer = () => {
     const CurrentWeather = useSelector((state) => state.currentWeather)
     const Forecast = useSelector((state) => state.weatherForecast)
     const isLoading = useSelector((state) => state.isLoading)
+    const isFailedToLoadData = useSelector((state) => state.isFailedToFetchData)
 
     const dispatch = useDispatch()
 
@@ -20,8 +21,10 @@ export const WeatherDisplayer = () => {
 
     return(
         <section>
-            {!isLoading ? (
-                <FadeIn>
+            {!isLoading ? [
+                isFailedToLoadData ? <h1>HAHAHAHAHAHAH</h1> :
+
+            <FadeIn>
                 <section className="MainContainer">
                     <div className="leftSection">
                     <CurrentWeatherContainer className="CurrentWeatherContainer">
@@ -45,6 +48,7 @@ export const WeatherDisplayer = () => {
                             <p>Weather data provided by <a href="https://www.weatherapi.com/" rel="noreferrer" target="_blank">weatherapi.com</a></p>
                         </AppDescription>
                     </div>
+
                     <ForecastContainer className="ForecastContainer">
                     <FadeIn>
                         <h1 className="centerTitle">Forecast for {CurrentWeather.data.location.name}</h1>
@@ -58,7 +62,7 @@ export const WeatherDisplayer = () => {
                     </ForecastContainer>
                 </section>
                 </FadeIn>
-            ):(<LoadingMessage>
+            ]:(<LoadingMessage>
                 <FiSun id="iconAnimate" size={150}/>
                 <h1>The weather is loading!</h1>
                 <h4>if the page won't load that means that server isn't responding</h4>
