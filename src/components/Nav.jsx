@@ -19,7 +19,7 @@ export const Nav = () => {
         <Navigation className="Nav">
             {/* <h1 className="centerTitle">Current weather and Forecast</h1> */}
             <div>
-                <input onChange={onChange} type="text" />
+                <input className="input-field" onChange={onChange} type="text" />
                 <button value={cityName} type="submit" onClick={submitAction}>Search</button>
             </div>
         </Navigation>
@@ -44,7 +44,6 @@ const Navigation = styled.div`
         box-shadow:#0086b3 0.5rem 0.5rem 0px;
     }
     input{
-        width: 300px;
         border: #1ac6ff solid 0.5rem;
         border-top-left-radius: 2rem;
         border-bottom-left-radius: 2rem;

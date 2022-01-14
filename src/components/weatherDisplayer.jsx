@@ -3,14 +3,16 @@ import { useEffect } from "react"
 import {useDispatch, useSelector} from "react-redux"
 import {loadWeather} from "../actions/weatherActoin"
 import {ForeCastCard} from "./forecastCard"
-import styled from "styled-components"
 import { FiSun } from "react-icons/fi";
-import FadeIn from 'react-fade-in';
+import { FaSkull } from "react-icons/fa";
 
 export const WeatherDisplayer = () => {
     const CurrentWeather = useSelector((state) => state.currentWeather)
     const Forecast = useSelector((state) => state.weatherForecast)
     const isLoading = useSelector((state) => state.isLoading)
+    const isFailedToLoadData = useSelector((state) => state.isFailedToFetchData)
+
+    console.log(isFailedToLoadData);
 
     const dispatch = useDispatch()
 
@@ -21,8 +23,9 @@ export const WeatherDisplayer = () => {
     return(
         <section className="main-section">
             {!isLoading ? (
-                <>
-                <section className="weather-results-section">
+                !isFailedToLoadData ? (
+                    <>
+                    <section className="weather-results-section">
                     <section className="section current-weather-section">
                         <h1 className="title center-title">Current weather</h1>
                         <h2 className="location-name">{CurrentWeather.data.location.name}</h2>
@@ -47,8 +50,13 @@ export const WeatherDisplayer = () => {
                             <p>Weather data provided by <a href="https://www.weatherapi.com/" rel="noreferrer" target="_blank"> weatherapi.com</a></p>
                     </section>
                 </section>
-                </>    
-
+                </> 
+                ) : (
+                    <section className="error-message">
+                        <FaSkull className="loading-icon" size={100}/>
+                        <h1 className="message">Server error or bad request!</h1>
+                    </section>
+                )   
             ):(<section className="loading-message">
                 <FiSun className="loading-icon" id="loading-icon" size={150}/>
                 <h1 className="message">The weather is loading!</h1>
