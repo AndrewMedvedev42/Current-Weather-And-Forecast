@@ -1,9 +1,7 @@
 export const ForeCastCard = ({date, data, weatherByHours}) => {
     return(
         <article className="forecast-slot">
-            <article>
-                <h2 className="forecast-date">{date}</h2>
-            </article>
+            <h2 className="forecast-date center-title">{date}</h2>
             <section className="forecast-schedule-list">
                 {weatherByHours.map((item)=>{
                     const timeInHours = item.time.slice(11)

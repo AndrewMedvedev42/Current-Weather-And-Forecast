@@ -19,38 +19,39 @@ export const WeatherDisplayer = () => {
     },[dispatch])
 
     return(
-        <section>
+        <section className="main-section">
             {!isLoading ? (
-                <section className="MainContainer">
-                    <section className="CurrentWeatherContainer">
-                        <h1 className="centerTitle">Current weather</h1>
-                            <FadeIn>
-                                <h1>{CurrentWeather.data.location.name}</h1>
-                                <h3>{CurrentWeather.data.location.localtime}</h3>
-                                <h2>{CurrentWeather.data.current.condition.text}</h2>
-                                <img id="icon" src={CurrentWeather.data.current.condition.icon} alt="" />
-                                <p>Temp: {CurrentWeather.data.current.temp_c} C</p>
-                                <p>Wind: {CurrentWeather.data.current.wind_kph} km/h</p>
-                            </FadeIn>
-                        </section>
-                        <section>
-                            <p>Weather data provided by <a href="https://www.weatherapi.com/" rel="noreferrer" target="_blank">weatherapi.com</a></p>
-                        </section>
-                    <section className="ForecastContainer">
-                        <h1 className="centerTitle">Forecast for {CurrentWeather.data.location.name}</h1>
-                        <section className="DailyForecast">
+                <>
+                <section className="weather-results-section">
+                    <section className="section current-weather-section">
+                        <h1 className="title center-title">Current weather</h1>
+                        <h2 className="location-name">{CurrentWeather.data.location.name}</h2>
+                        <h3 className="location-localtime">{CurrentWeather.data.location.localtime}</h3>
+                        <h2 className="condition-text">{CurrentWeather.data.current.condition.text}</h2>
+                        <img className="weather-icon" id="icon" src={CurrentWeather.data.current.condition.icon} alt="" />
+                        <p className="temperature-text">Temp: {CurrentWeather.data.current.temp_c} C</p>
+                        <p className="wind-speed">Wind: {CurrentWeather.data.current.wind_kph} km/h</p>
+                    </section>
+
+                    <section className="section forecast-section">
+                        <h1 className="title">Forecast for {CurrentWeather.data.location.name}</h1>
+                        <section className="forecast-list">
                             {Forecast.data.forecast.forecastday.map((item)=>{
                                 const {date, date_epoch, day, hour} = item
                                 return <ForeCastCard key={date_epoch} date={date} data={day} weatherByHours={hour}/>
                             })}
                         </section>
                     </section>
+
+                    <section className="section app-details-section">
+                            <p>Weather data provided by <a href="https://www.weatherapi.com/" rel="noreferrer" target="_blank"> weatherapi.com</a></p>
+                    </section>
                 </section>
-            ):(<section>
-                <FiSun id="iconAnimate" size={150}/>
-                <h1>The weather is loading!</h1>
-                <h4>if the page won't load that means that server isn't responding</h4>
-                <h3>Try to fill your input correctly or reload page.</h3>
+                </>    
+
+            ):(<section className="loading-message">
+                <FiSun className="loading-icon" id="loading-icon" size={150}/>
+                <h1 className="message">The weather is loading!</h1>
             </section>)}
         </section>
     )
