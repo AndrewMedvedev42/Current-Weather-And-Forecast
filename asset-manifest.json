@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Current-Weather-And-Forecast/static/css/main.5720df48.chunk.css",
-    "main.js": "/Current-Weather-And-Forecast/static/js/main.411463a3.chunk.js",
-    "main.js.map": "/Current-Weather-And-Forecast/static/js/main.411463a3.chunk.js.map",
+    "main.js": "/Current-Weather-And-Forecast/static/js/main.9df7518d.chunk.js",
+    "main.js.map": "/Current-Weather-And-Forecast/static/js/main.9df7518d.chunk.js.map",
     "runtime-main.js": "/Current-Weather-And-Forecast/static/js/runtime-main.b8f7579f.js",
     "runtime-main.js.map": "/Current-Weather-And-Forecast/static/js/runtime-main.b8f7579f.js.map",
     "static/js/2.8e81df1a.chunk.js": "/Current-Weather-And-Forecast/static/js/2.8e81df1a.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.b8f7579f.js",
     "static/js/2.8e81df1a.chunk.js",
     "static/css/main.5720df48.chunk.css",
-    "static/js/main.411463a3.chunk.js"
+    "static/js/main.9df7518d.chunk.js"
   ]
 }
