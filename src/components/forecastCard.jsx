@@ -1,14 +1,10 @@
-import styled from "styled-components"
-
 export const ForeCastCard = ({date, data, weatherByHours}) => {
     return(
-        <ForecastSlot className="DailyForecastSlot">
-            <div>
-                <article>
-                    <h2 className="ForecastDate">{date}</h2>
-                </article>
-            </div>
-            <section className="ForecastDetails">
+        <article className="forecast-slot">
+            <article>
+                <h2 className="forecast-date">{date}</h2>
+            </article>
+            <section className="forecast-schedule-list">
                 {weatherByHours.map((item)=>{
                     const timeInHours = item.time.slice(11)
 
@@ -33,21 +29,15 @@ export const ForeCastCard = ({date, data, weatherByHours}) => {
                     }
                 })}
             </section>
-        </ForecastSlot>
+        </article>
     )
 }
 
 const ForecastDetails = ({data,time}) =>{
     return(
-        <div className="Details">
-            <img className="Icon" src={data.condition.icon} alt="" />
-            <p className="Detail">{time}</p>
-            {/* <p className="forecastDetail">{data.condition.text}</p> */}
+        <div className="forecast-details">
+            <img className="icon" src={data.condition.icon} alt="" />
+            <p className="forecast-time">{time}</p>
         </div>
     )
 }
-
-const ForecastSlot = styled.div`
-    margin: 1rem;
-    padding: 1rem;
-`
