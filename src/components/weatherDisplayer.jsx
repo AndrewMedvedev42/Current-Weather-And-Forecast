@@ -7,15 +7,15 @@ import { FiSun } from "react-icons/fi";
 import { FaSkull } from "react-icons/fa";
 
 export const WeatherDisplayer = () => {
+    //GETS DATA FROM GLOBAL STATE WITH HELP OF REDUX
     const CurrentWeather = useSelector((state) => state.currentWeather)
     const Forecast = useSelector((state) => state.weatherForecast)
     const isLoading = useSelector((state) => state.isLoading)
     const isFailedToLoadData = useSelector((state) => state.isFailedToFetchData)
 
-    console.log(isFailedToLoadData);
-
     const dispatch = useDispatch()
 
+    //GETS WETAHER DATA BY CITY
     useEffect(()=>{
         dispatch(loadWeather("kyoto"))
     },[dispatch])
@@ -23,6 +23,7 @@ export const WeatherDisplayer = () => {
     return(
         <section className="main-section">
             {!isLoading ? (
+                //IF STATE OF isFailedToLoadData IS TRUE, SHOWS ERROR MESSAGE
                 !isFailedToLoadData ? (
                     <>
                     <section className="weather-results-section">
@@ -37,7 +38,7 @@ export const WeatherDisplayer = () => {
                     </section>
 
                     <section className="section forecast-section">
-                        <h1 className="title">Forecast for {CurrentWeather.data.location.name}</h1>
+                        <h1 className="title center-title">Forecast for {CurrentWeather.data.location.name}</h1>
                         <section className="forecast-list">
                             {Forecast.data.forecast.forecastday.map((item)=>{
                                 const {date, date_epoch, day, hour} = item

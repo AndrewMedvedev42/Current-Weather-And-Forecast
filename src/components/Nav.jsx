@@ -8,16 +8,16 @@ export const Nav = () => {
     const dispatch = useDispatch()
     const [cityName, setCityName] = useState("")
 
+    //ONCHANGE ON INPUT FIELD, SETS cityName STATE
     const onChange = (e) => {
         setCityName(e.target.value);
-        console.log(e.target.value);
     }
+    //DISPACHES ENTERED VALUE FOR WEATHER REQUEST
     const submitAction = () => {
         dispatch(loadWeather(cityName))
     }
     return(
         <Navigation className="Nav">
-            {/* <h1 className="centerTitle">Current weather and Forecast</h1> */}
             <div>
                 <input className="input-field" onChange={onChange} type="text" />
                 <button value={cityName} type="submit" onClick={submitAction}>Search</button>
